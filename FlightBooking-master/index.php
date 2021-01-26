@@ -51,6 +51,7 @@
                 <li><a href="status.php">Flight Status</a></li>
                 <li><a href="reservation.php">Reservations</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+				<li><a href="covid.php">Covid-19 Tracker</a></li>
 				<li>
 					<?php  if (isset($_SESSION['username'])) : ?>
 						<a>Welcome <a style="text-transform: uppercase;" href="profile.php"><strong><?php echo $_SESSION['username']; ?></strong></a></a>
@@ -99,7 +100,7 @@
 				</div>
 			<br/>
 				<div id="depart_block">
-	        	Depart Date:<br/><br/> <input id="depart_date" name="depart" type="text" placeholder="yyyy-mm-dd" required>
+	        	Depart Date:<br/><br/> <input id="depart_date" name="depart" type="date" placeholder="yyyy-mm-dd" required>
 	        	</div>
 	        	<br/>
 	        	<div id="return_block">
