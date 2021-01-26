@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
+<!-- <script>
 	
 	var today = new Date();
 	
@@ -38,7 +38,7 @@
 	        })
 	    });
 
-</script>
+</script> -->
 </head>
 
 <body>
@@ -80,22 +80,34 @@
 	        	<div id="from_block">
 	        	FROM: <br/><br/><select id="origin_drop" onchange="updateSelect(this,'destination_drop')" name="origin" required>
 	        			  <option value="" selected="selected"></option>
-						  <option value="Dhaka">Hazrat Shahjalal International Airport, Dhaka</option>
-						  <option value="Chattogram">Shah Amanat International Airport, Chattogram</option>
-						  <option value="Sylhet">Osmani International Airport, Sylhet</option>
-						  <option value="Cox's Bazar">Cox's Bazar Airport</option>
-						  <option value="Rajshahi">Shah Makhdum Airport, Rajshahi</option>
+						  <option value="Malaysia">Kuala Lumpur International Airport, Kuala Lumpur</option>
+						  <option value="Brunei">Brunei International Airport , Brunei</option>
+						  <option value="China">Wuhan Tianhe International Airport ,China</option>
+						  <option value="Hongkong">Hong Kong International Airport, Hong Kong</option>
+						  <option value="India">Chennai International Airport, India</option>
+						  <option value="Indonesia">Husein Sastranegara International Airport, Bandung Indonesia</option>
+						  <option value="Singapore">Singapore Changi Airport, Singapore</option>
+						  <option value="Taiwan">Taipei Taoyuan International Airport, Taiwan</option>
+						  <option value="Thailand">Krabi Airport, Thailand</option>
+						  <option value="Korea">Incheon International Airport, South Korea</option>
+						  <option value="Vietnam">Noi Bai International Airport, Hanoi Vietnam</option>
 						</select>
 				</div>
 				
 				<div id="to_block">
 	        	TO: <br/><br/><select id="destination_drop" onchange="updateSelect(this,'origin_drop')" name="destination" required>
 	        			  <option value="" selected="selected"></option>
-						  <option value="Dhaka">Hazrat Shahjalal International Airport, Dhaka</option>
-						  <option value="Chattogram">Shah Amanat International Airport, Chattogram</option>
-						  <option value="Sylhet">Osmani International Airport, Sylhet</option>
-						  <option value="Cox's Bazar">Cox's Bazar Airport</option>
-						  <option value="Rajshahi">Shah Makhdum Airport, Rajshahi</option>
+						  <option value="Malaysia">Kuala Lumpur International Airport, Kuala Lumpur</option>
+						  <option value="Brunei">Brunei International Airport , Brunei</option>
+						  <option value="China">Wuhan Tianhe International Airport ,China</option>
+						  <option value="Hongkong">Hong Kong International Airport, Hong Kong</option>
+						  <option value="India">Chennai International Airport, India</option>
+						  <option value="Indonesia">Husein Sastranegara International Airport, Bandung Indonesia</option>
+						  <option value="Singapore">Singapore Changi Airport, Singapore</option>
+						  <option value="Taiwan">Taipei Taoyuan International Airport, Taiwan</option>
+						  <option value="Thailand">Krabi Airport, Thailand</option>
+						  <option value="Korea">Incheon International Airport, South Korea</option>
+						  <option value="Vietnam">Noi Bai International Airport, Hanoi Vietnam</option>
 						</select>
 				</div>
 			<br/>
@@ -104,7 +116,7 @@
 	        	</div>
 	        	<br/>
 	        	<div id="return_block">
-	        	Return Date:<br/><br/> <input id="return_date" name="return" type="text" placeholder="yyyy-mm-dd" required> 	
+	        	Return Date:<br/><br/> <input id="return_date" name="return" type="date" placeholder="yyyy-mm-dd" required> 	
 	        	</div>
 	        	<br/>
 	        	<div id="passenger_block">
@@ -128,15 +140,18 @@
 						  <option value="ONE">One Way</option>
 						</select>
 	        	</div>
-    <br/>
+    <br>
+	<div class="buttonFlight">
+	<br>
         		<button id="search" type="submit" >Find Flights</button>
+				</div>
+
         		</form>
-        		
-        
+				
+	
         </div>
         
         </div>
-        
 </div>       
 <div class="footer">
   <p>CSE311 | This website is made with &#128147; by Syed, Nafis, Tamanna & Lamia</p>
