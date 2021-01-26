@@ -64,6 +64,7 @@
                 <li><a href="status.php">Flight Status</a></li>
                 <li><a href="reservation.php">Reservations</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="covid.php">Covid-19 Tracker</a></li>
 				<li>
 					<?php  if (isset($_SESSION['username'])) : ?>
 						<a>Welcome <a style="text-transform: uppercase;" href="profile.php"><strong><?php echo $_SESSION['username']; ?></strong></a></a>
@@ -107,8 +108,6 @@
 ?>
         
         <div id="menubar_space"></div>
-
-        <div id="login_space"></div>
 
     <section class="page-section">
         <div class="quick">
