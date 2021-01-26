@@ -99,7 +99,7 @@
 				</div>
 			<br/>
 				<div id="depart_block">
-	        	Depart Date:<br/><br/> <input id="depart_date" name="depart" type="text" placeholder="yyyy-mm-dd" required>
+	        	Depart Date:<br/><br/> <input id="depart_date" name="depart" type="date" placeholder="yyyy-mm-dd" required>
 	        	</div>
 	        	<br/>
 	        	<div id="return_block">
