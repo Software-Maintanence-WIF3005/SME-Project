@@ -34,7 +34,10 @@ session_start();
                 <li><a href="index.php">Home</a></li>
                 <li><a href="status.php">Flight Status</a></li>
                 <li><a href="reservation.php">Reservations</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+
+                <li><a href="contact.php">Contact Us</a></li>
+
+               
 				<li><a href="covid.php">Covid-19 Tracker</a></li>
 				<li>
 					<?php  if (isset($_SESSION['username'])) : ?>
