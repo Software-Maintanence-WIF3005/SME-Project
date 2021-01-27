@@ -127,7 +127,7 @@ input {
 
 			<?php 
 	
-	
+		//SPECIFY THE URL 
 		$url1 = 'https://corona.lmao.ninja/v2/countries/Malaysia?yesterday=true&strict=true&query%20=';
 		$url2 = 'https://corona.lmao.ninja/v2/countries/Brunei?yesterday&strict&query%20';
 		$url3 = 'https://corona.lmao.ninja/v2/countries/China?yesterday&strict&query%20';
@@ -139,7 +139,8 @@ input {
 		$url9 = 'https://corona.lmao.ninja/v2/countries/Thailand?yesterday&strict&query%20';
 		$url10 = 'https://corona.lmao.ninja/v2/countries/%20South%20Korea?yesterday=true&strict=true&query%20=';
 		$url11 = 'https://corona.lmao.ninja/v2/countries/Vietnam?yesterday&strict&query%20';
-
+		
+		//CREATE NEW CURL SESSION & LINK TO URL
 		$curl1 = curl_init($url1);
 		$curl2 = curl_init($url2);
 		$curl3 = curl_init($url3);
@@ -294,25 +295,8 @@ input {
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			CURLOPT_CUSTOMREQUEST => 'GET',
 		  ));
-
-
-	/*	  switch (country) {
-			case Malaysia:
-			  code to be executed if n=label1;
-			  break;
-			case label2:
-			  code to be executed if n=label2;
-			  break;
-			case label3:
-			  code to be executed if n=label3;
-			  break;
-			  ...
-			default:
-			  code to be executed if n is different from all labels;
-		  }
-		 */ 
-
-	
+		
+		//Execute the cURL request with all previous settings
 		$response_json1 = curl_exec($curl1);
 		$response_json2 = curl_exec($curl2);
 		$response_json3 = curl_exec($curl3);
@@ -325,7 +309,7 @@ input {
 		$response_json10 = curl_exec($curl10);
 		$response_json11 = curl_exec($curl11);
 		
-
+		//Close the cURL session
 		curl_close($curl1);
 		curl_close($curl2);
 		curl_close($curl3);
@@ -338,7 +322,7 @@ input {
 		curl_close($curl10);
 		curl_close($curl11);
 
-
+		// Translate from string to PHP array
 		$response1=json_decode($response_json1, true);
 		$response2=json_decode($response_json2, true);
 		$response3=json_decode($response_json3, true);
