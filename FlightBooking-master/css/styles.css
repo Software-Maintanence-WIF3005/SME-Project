@@ -5,7 +5,8 @@ html, body{
     background-repeat: no-repeat;
     background-color: #e6e6e6;
     background-size: cover;  
-    background-position: center;  
+	background-position: center; 
+	background-attachment: fixed; 
     margin: 0;
     padding: 0;
     height: 100%;
@@ -227,7 +228,7 @@ login{
 
 
 .footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
