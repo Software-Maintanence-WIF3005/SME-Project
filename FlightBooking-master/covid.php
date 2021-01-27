@@ -127,7 +127,11 @@ input {
 
 			<?php 
 	
+
+		//SPECIFY THE URL 
+
 	
+
 		$url1 = 'https://corona.lmao.ninja/v2/countries/Malaysia?yesterday=true&strict=true&query%20=';
 		$url2 = 'https://corona.lmao.ninja/v2/countries/Brunei?yesterday&strict&query%20';
 		$url3 = 'https://corona.lmao.ninja/v2/countries/China?yesterday&strict&query%20';
@@ -139,6 +143,11 @@ input {
 		$url9 = 'https://corona.lmao.ninja/v2/countries/Thailand?yesterday&strict&query%20';
 		$url10 = 'https://corona.lmao.ninja/v2/countries/%20South%20Korea?yesterday=true&strict=true&query%20=';
 		$url11 = 'https://corona.lmao.ninja/v2/countries/Vietnam?yesterday&strict&query%20';
+
+		
+		//CREATE NEW CURL SESSION & LINK TO URL
+
+
 
 		$curl1 = curl_init($url1);
 		$curl2 = curl_init($url2);
@@ -295,6 +304,10 @@ input {
 			CURLOPT_CUSTOMREQUEST => 'GET',
 		  ));
 
+		
+		//Execute the cURL request with all previous settings
+
+
 
 	/*	  switch (country) {
 			case Malaysia:
@@ -313,6 +326,7 @@ input {
 		 */ 
 
 	
+
 		$response_json1 = curl_exec($curl1);
 		$response_json2 = curl_exec($curl2);
 		$response_json3 = curl_exec($curl3);
@@ -326,6 +340,10 @@ input {
 		$response_json11 = curl_exec($curl11);
 		
 
+		//Close the cURL session
+
+
+
 		curl_close($curl1);
 		curl_close($curl2);
 		curl_close($curl3);
@@ -337,6 +355,10 @@ input {
 		curl_close($curl9);
 		curl_close($curl10);
 		curl_close($curl11);
+
+
+		// Translate from string to PHP array
+
 
 
 		$response1=json_decode($response_json1, true);
